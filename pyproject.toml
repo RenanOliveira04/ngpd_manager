@@ -9,9 +9,10 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "3.12.*"
 ignr = "^2.2"
+pydantic = {extras = ["email"], version = "^2.8.2"}
 
 [tool.ruff]
-line-length = 79
+line-length = 84
 extend-exclude = ['migrations']
 
 [tool.ruff.lint]
@@ -29,7 +30,7 @@ addopts = '-p no:warnings'
 [tool.taskipy.tasks]
 lint = 'ruff check . && ruff check . --diff'
 format = 'ruff check . --fix && ruff format .'
-run = 'fastapi dev fast_zero/app.py'
+run = 'fastapi dev app.py'
 pre_test = 'task lint'
 test = 'pytest -s -x --cov=fast_zero -vv'
 post_test = 'coverage html'
