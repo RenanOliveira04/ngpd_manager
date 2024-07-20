@@ -3,8 +3,8 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from ngpd_manager.app import app
-from ngpd_manager.models.app_models import table_registry
+from ngpd_manager.backend.app import app
+from ngpd_manager.backend.models.app_models import table_registry
 
 
 @pytest.fixture

@@ -1,6 +1,6 @@
 from sqlalchemy import select
 
-from ngpd_manager.models.app_models import Student
+from backend.models.app_models import Student
 
 
 def test_student_model(session):

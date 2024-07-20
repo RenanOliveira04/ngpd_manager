@@ -40,10 +40,10 @@ post_test = 'coverage html'
 
 [tool.poetry.group.dev.dependencies]
 fastapi = "^0.111.0"
-pytest = "^8.2.2"
 pytest-cov = "^5.0.0"
 taskipy = "^1.13.0"
 ruff = "^0.5.1"
+pytest = "^8.3.1"
 
 [build-system]
 requires = ["poetry-core"]
